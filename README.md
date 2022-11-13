@@ -1,8 +1,12 @@
-# Discover and find your next employer
+# Customer Feedback Form
 
-This job board gives users the opportunity to view recent jobs in the market, built with Next.js, Xata, and Cloudinary that saves its data to the Xata database and renders all the jobs for you to see a job.
+Collect user data and save it to Xata serverless database and using Cloudinary to store the image for the landing page.
 
-<img width="1242" alt="all dev jobs" src="https://user-images.githubusercontent.com/25850598/200447477-849a94a1-ef41-4e9d-80a8-83a06f96f76e.png">
+<img width="1242" alt="customer feedback form" src="https://user-images.githubusercontent.com/25850598/201543751-fb4cf85b-4726-4e39-bf5f-8c7678b42c5b.png">
+
+## Demo
+
+Preview the app [here](https://next-customer-form-with-xata-cloudinary.vercel.app/)
 
 ## Author
 
