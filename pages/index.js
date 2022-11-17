@@ -1,4 +1,4 @@
-import { use, useState } from 'react';
+import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -8,9 +8,7 @@ const defaultFormFields = {
   last_name: '',
   email: '',
   company: '',
-
   message: '',
-
   hear_about_us: '',
 };
 
@@ -18,16 +16,8 @@ export default function Home() {
   const router = useRouter();
   const [formFields, setFormFields] = useState(defaultFormFields);
 
-  const {
-    first_name,
-    last_name,
-    email,
-    company,
-
-    message,
-
-    hear_about_us,
-  } = formFields;
+  const { first_name, last_name, email, company, message, hear_about_us } =
+    formFields;
 
   const submit = () => {
     fetch('/api/add-detail', {
@@ -40,9 +30,7 @@ export default function Home() {
         last_name,
         email,
         company,
-
         message,
-
         hear_about_us,
       }),
     }).then(() => router.push('/success'));
@@ -92,6 +80,7 @@ export default function Home() {
                 <input
                   type='text'
                   name='first_name'
+                  required
                   value={first_name}
                   id='first_name'
                   className='w-full border-2 p-1'
@@ -108,6 +97,7 @@ export default function Home() {
                   type='text'
                   name='last_name'
                   id='last_name'
+                  required
                   value={last_name}
                   className='w-full border-2 p-1'
                   onChange={handleChange}
@@ -123,6 +113,7 @@ export default function Home() {
                   type='email'
                   name='email'
                   id='email'
+                  required
                   value={email}
                   className='w-full border-2 p-1'
                   onChange={handleChange}
@@ -138,6 +129,7 @@ export default function Home() {
                   type='text'
                   value={company}
                   name='company'
+                  required
                   id='company'
                   className='w-full border-2 p-1'
                   onChange={handleChange}
@@ -170,6 +162,7 @@ export default function Home() {
                   name='hear_about_us'
                   value={hear_about_us}
                   onChange={handleChange}
+                  required
                   className='w-full border-2 p-1'
                 />
               </div>
